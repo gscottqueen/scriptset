@@ -20,27 +20,31 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
+        <div className="scene-header">
           <div>
             <div>{this.state.scriptCover.title}</div>
             <div>{this.state.scriptCover.additional ? this.state.scriptCover.additional : null}</div>
             <div>{this.state.scriptCover.author ? this.state.scriptCover.author : 'unknown'}</div>
           </div>
-            {this.state.scriptScenes.map(function(scene) {
-              console.log(scene.heading)
+            {this.state.scriptScenes.map(function(scene, key) {
               return (
-                <div>
+                <div key={key}>
                   <div>{scene.heading.title}</div>
-                  <div>{scene.heading.description[0]}</div>
-                  <div>{scene.heading.description[1]}</div>
-                  <div>{scene.heading.description[2]}</div>
+                  {scene.heading.description.map(function(detail, key) {
+                    console.log(detail)
+                    return (
+                      <div key={key}>
+                        <div>{detail}</div>
+                      </div>
+                    )
+                  })}
                   <div>{scene.heading.setting.title}</div>
                   <div>{scene.heading.sequence.en ? scene.heading.sequence.en : null}</div>
                   {/* <div>{scene.heading.setting.en ? scene.heading.settings.en : null}</div> */}
                 </div>
               )
             })}
-        </header>
+        </div>
       </div>
     );
   }
