@@ -16,7 +16,6 @@ class App extends Component {
   
   render() {
     console.log(this.state.script)
-    // console.log(this.state.scriptCover)
 
     return (
       <div className="App">
@@ -31,7 +30,6 @@ class App extends Component {
                 <div key={key}>
                   <div>{scene.heading.title}</div>
                   {scene.heading.description.map(function(detail, key) {
-                    console.log(detail)
                     return (
                       <div key={key}>
                         <div>{detail}</div>
