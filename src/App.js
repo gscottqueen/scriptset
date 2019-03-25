@@ -16,7 +16,7 @@ class App extends Component {
   
   render() {
     console.log(this.state.script)
-    // console.log(this.state.scriptCover)
+    console.log(this.state.scriptCover)
 
     return (
       <div className="App">
