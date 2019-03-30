@@ -1,4 +1,21 @@
-.scene-header {
-  background-color: #282c34;
-  color: white;
+.script {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 96px 96px 96px 144px;
+  align-items: center;
+  text-align: center;
+  max-width: 1104px;
 }
+
+/* .script-cover */
+/* .script-cover--title */
+/* .script-cover--additional */
+/* .script-cover--author */
+/* .scene */
+/* .scene-heading--title */
+/* .scene-heading--description-detail */
+/* .scene-heading--setting-title */
+/* .scene-heading--sequence */
+/* .scene-heading--setting */

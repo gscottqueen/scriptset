@@ -19,26 +19,26 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="scene-header">
-          <div>
-            <div>{this.state.scriptCover.title}</div>
-            <div>{this.state.scriptCover.additional ? this.state.scriptCover.additional : null}</div>
-            <div>{this.state.scriptCover.author ? this.state.scriptCover.author : 'unknown'}</div>
+        <div className="script">
+          <div className="script-cover">
+            <div className="script-cover--title">{this.state.scriptCover.title}</div>
+            <div className="script-cover--additional">{this.state.scriptCover.additional ? this.state.scriptCover.additional : null}</div>
+            <div className="script-cover--author">{this.state.scriptCover.author ? this.state.scriptCover.author : 'unknown'}</div>
           </div>
             {this.state.scriptScenes.map(function(scene, key) {
               return (
-                <div key={key}>
-                  <div>{scene.heading.title}</div>
+                <div key={key} className="scene">
+                  <div className="scene-heading--title">{scene.heading.title}</div>
                   {scene.heading.description.map(function(detail, key) {
                     return (
                       <div key={key}>
-                        <div>{detail}</div>
+                        <div className="scene-heading--description-detail">{detail}</div>
                       </div>
                     )
                   })}
-                  <div>{scene.heading.setting.title}</div>
-                  <div>{scene.heading.sequence.en ? scene.heading.sequence.en : null}</div>
-                  {/* <div>{scene.heading.setting.en ? scene.heading.settings.en : null}</div> */}
+                  <div className="scene-heading--setting-title">{scene.heading.setting.title}</div>
+                  <div className="scene-heading--sequence">{scene.heading.sequence.en ? scene.heading.sequence.en : null}</div>
+                  <div className="scene-heading--setting">{scene.heading.setting.en ? scene.heading.setting.en : null}</div>
                 </div>
               )
             })}
