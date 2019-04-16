@@ -1,21 +1,167 @@
+:root {
+  --single-space: 24px;
+  --double-space: 36px;
+  --dark-shaddow: 0px 0px 2px 0px rgba(25,27,31,0.67);
+  --light-shaddow: 0px 0px 2px 0px rgba(208, 208, 208, 0.67);
+  --glow-shaddow: 0px 0px 2px 0px rgba(82, 53, 1, 0.67);
+  --standard-margins: 96px 96px 96px 144px;
+  --large-margins: 96px 144px 96px 144px;
+  --mobile-margins: 96px 24px 96px 24px;
+}
+
 .script {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  margin: 96px 96px 96px 144px;
   align-items: center;
-  text-align: center;
-  max-width: 1104px;
+  margin: 2%;
 }
 
-/* .script-cover */
-/* .script-cover--title */
-/* .script-cover--additional */
-/* .script-cover--author */
-/* .scene */
-/* .scene-heading--title */
-/* .scene-heading--description-detail */
-/* .scene-heading--setting-title */
-/* .scene-heading--sequence */
-/* .scene-heading--setting */
+.script-cover {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 816px;
+  width: 100%;
+  height: 1056px;
+  /* -webkit-box-shadow: var(--dark-shaddow);
+  -moz-box-shadow: var(--dark-shaddow);
+  box-shadow: var(--dark-shaddow); */
+  /* TODO: setup dark vs light theme */
+  /* -webkit-box-shadow: var(--light-shaddow);
+  -moz-box-shadow: var(--light-shaddow);
+  box-shadow: var(--light-shaddow); */
+  /* TODO: setup nightlight theme */
+  -webkit-box-shadow: var(--glow-shaddow);
+  -moz-box-shadow: var(--glow-shaddow);
+  box-shadow: var(--glow-shaddow);
+  padding: var(--standard-margins);
+  /* TODO: set up large margins selector */
+  /* padding: var(--large-margins); */
+  /* TODO: set up mobile margins breakpoint */
+  /* padding: var(--mobile-margins); */
+  margin-bottom: 36px;
+  overflow: none;
+}
+
+.script-cover--title {
+  font-weight: bold;
+  margin-top: 25%;
+  text-transform: uppercase;
+  margin-bottom: 72px;
+}
+
+.script-cover--additional {
+  margin-bottom: var(--single-space);
+}
+
+.script-cover--byline {
+  margin-bottom: var(--single-space);
+}
+
+.script-cover--author {
+  margin-bottom: var(--single-space);
+}
+
+.script-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 816px;
+  width: 100%;
+  /* height: 1056px; */
+  /* -webkit-box-shadow: var(--dark-shaddow);
+  -moz-box-shadow: var(--dark-shaddow);
+  box-shadow: var(--dark-shaddow); */
+  /* TODO: setup dark vs light theme */
+  /* -webkit-box-shadow: var(--light-shaddow);
+  -moz-box-shadow: var(--light-shaddow);
+  box-shadow: var(--light-shaddow); */
+  /* TODO: setup nightlight theme */
+  -webkit-box-shadow: var(--glow-shaddow);
+  -moz-box-shadow: var(--glow-shaddow);
+  box-shadow: var(--glow-shaddow);
+  padding: var(--standard-margins);
+  /* TODO: set up large margins */
+  /* padding: var(--large-margins; */  
+  /* TODO: set up mobile margins breakpoint */
+  /* padding: var(--mobile-margins); */
+  margin-bottom: 36px;
+  overflow: none;
+}
+
+/* .script-dialog */
+
+.script-dialog--title {
+  /* border: 1px solid lightseagreen; */
+  text-decoration: underline;
+  margin-top: 84px;
+  margin-bottom: var(--single-space);
+}
+
+.scene {
+  /* border: 1px solid lightgoldenrodyellow; */
+}
+
+.scene-heading {
+  /* border: 1px solid lightcoral; */
+  text-align: left;
+  margin-top: var(--double-space);
+  margin-bottom: var(--double-space);
+}
+
+.scene-heading--title {
+  /* border: 1px solid lightgrey; */
+  text-align: left;
+  margin-top: var(--single-space);
+}
+
+.scene-heading--descirption {
+  /* border: 1px solid cyan; */
+  margin-top: var(--double-space);
+  margin-bottom: var(--double-space);
+}
+
+.scene-body-character {
+  /* border: 1px solid red; */
+  text-align: left;
+  margin-left: 260px;
+  max-width: 316.8px;
+}
+
+.scene-body-parenthetical {
+  /* border: 1px solid pink; */
+  text-align: left;
+  margin-left: 283px;
+  max-width: 192px;
+}
+
+.scene-body-parenthetical::before {
+  content: "("
+}
+.scene-body-parenthetical::after {
+  content: ")"
+}
+
+.scene-body-dialogue {
+  /* border: 1px solid lime; */
+  text-align: left;
+  margin-left: 134px;
+  max-width: 316.8px;
+  margin-bottom: var(--double-space);
+}
+
+.scene-body-action {
+  /* border: 1px solid powderblue; */
+  text-align: left;
+  margin-left: 120px;
+  max-width: 576px;
+  margin-bottom: var(--single-space);
+}
+
+.scene-body-transition {
+  /* border: 1px solid peachpuff; */
+  text-align: right;
+  margin-left: auto;
+  max-width: 144px;
+}
+
