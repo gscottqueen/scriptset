@@ -1,77 +1,71 @@
 import React, { Component } from 'react';
+import { Navbar, Button } from 'react-bootstrap';
 import './App.css';
-import DATA from './farmland.json'
-
-// componentDidMount() {
-//   console.log('height: ' + document.getElementById('script-page'))
-// }
 
 class App extends Component {
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
 
-  constructor(props) {
-    super(props)
-    this.state = { 
-      script: DATA,
-      scriptCover: DATA.document.cover,
-      scriptHeader: DATA.document.header,
-      scriptFooter: DATA.document.footer,
-      scriptScenes: DATA.document.scenes,
-    }
+  login() {
+    this.props.auth.login();
+  }
+
+  logout() {
+    this.props.auth.logout();
   }
 
   componentDidMount() {
-    // console.log('script height: ' + document.getElementById('script').clientHeight)
-    // console.log('script-cover height: ' + document.getElementById('script-cover').clientHeight)
-    // console.log('script-page height: ' + document.getElementById('script-page').clientHeight / document.getElementById('script-cover').clientHeight)
+    const { renewSession } = this.props.auth;
 
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      renewSession();
+    }
   }
-  
-  render() {
-    console.log(this.state.script)
-    console.log(this.state.scriptScenes)
 
+  render() {
+    const { isAuthenticated } = this.props.auth;
 
     return (
-      <div className="App">
-        <div id="script" className="script">
-          <div  id="script-cover" className="script-cover script-cover">
-            <div className="script-cover--title">"{this.state.scriptCover.title}"</div>
-            <div className="script-cover--additional">{this.state.scriptCover.additional ? this.state.scriptCover.additional : null}</div>
-            <div className="script-cover--byline">written by</div>
-            <div className="script-cover--author">{this.state.scriptCover.author ? this.state.scriptCover.author : 'unknown'}</div>
-          </div>
-          <div id="script-page" className="script-dialog script-page">
-          <div className="script-dialog--title">{this.state.scriptCover.title}</div>
-            {this.state.scriptScenes.map(function(scene, key) {
-              return (
-                <div key={key} className="scene" data-number={key}>
-                <div className="scene-heading">
-                <div className="scene-heading--setting-sequence">
-                  <span className="scene-heading--context">{scene.heading.context.en ? scene.heading.context.en + ".  " : null}</span>
-                    <span className="scene-heading--setting">{scene.heading.setting.en ? scene.heading.setting.en + ' - ' : null}</span>
-                    <span className="scene-heading--sequence">{scene.heading.sequence.en ? scene.heading.sequence.en : null}</span>
-                  </div>
-                  <div className="scene-heading--title">{scene.heading.title ? scene.heading.title : null}</div>
-                  <div className="scene-heading--descirption">
-                    {scene.heading.description.map(function(detail, key) {
-                      return (
-                          <span className="scene-heading--description-detail" key={key}>{detail}</span>
-                      )
-                    })}
-                  </div>
-                  </div>
-                  <div className="scene-body">
-                    {scene.body.map(function(content, key) {
-                      return (
-                          <div className={"scene-body-" + content.type} key={key}>{content.content.en}</div>
-                      )
-                    })}
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
+      <div>
+        <Navbar fluid>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="#">Auth0 - React</a>
+            </Navbar.Brand>
+            <Button
+              bsStyle="primary"
+              className="btn-margin"
+              onClick={this.goTo.bind(this, 'home')}
+            >
+              Home
+            </Button>
+            {
+              !isAuthenticated() && (
+                  <Button
+                    id="qsLoginBtn"
+                    bsStyle="primary"
+                    className="btn-margin"
+                    onClick={this.login.bind(this)}
+                  >
+                    Log In
+                  </Button>
+                )
+            }
+            {
+              isAuthenticated() && (
+                  <Button
+                    id="qsLogoutBtn"
+                    bsStyle="primary"
+                    className="btn-margin"
+                    onClick={this.logout.bind(this)}
+                  >
+                    Log Out
+                  </Button>
+                )
+            }
+          </Navbar.Header>
+        </Navbar>
       </div>
     );
   }
