@@ -20,9 +20,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('script height: ' + document.getElementById('script').clientHeight)
-    console.log('script-cover height: ' + document.getElementById('script-cover').clientHeight)
-    console.log('script-page height: ' + document.getElementById('script-page').clientHeight / document.getElementById('script-cover').clientHeight)
+    // console.log('script height: ' + document.getElementById('script').clientHeight)
+    // console.log('script-cover height: ' + document.getElementById('script-cover').clientHeight)
+    // console.log('script-page height: ' + document.getElementById('script-page').clientHeight / document.getElementById('script-cover').clientHeight)
 
   }
   
