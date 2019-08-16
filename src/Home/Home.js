@@ -23,6 +23,7 @@ class Home extends Component {
           !isAuthenticated() && (
               <h4>
                 You are not logged in! Please{' '}
+                {/* eslint-disable-next-line */}
                 <a
                   style={{ cursor: 'pointer' }}
                   onClick={this.login.bind(this)}

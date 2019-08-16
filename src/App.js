@@ -31,7 +31,8 @@ class App extends Component {
         <Navbar fluid>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">Auth0 - React</a>
+              <Button 
+              onClick={this.goTo.bind(this, 'home')}>Auth0 - React</Button>
             </Navbar.Brand>
             <Button
               bsStyle="primary"
