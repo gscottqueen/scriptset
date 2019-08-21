@@ -1,3 +1,9 @@
+/* bootstrap */
+.btn-margin {
+  margin: 7px 3px;
+}
+/* end bootstrap */
+
 :root {
   --single-space: 24px;
   --double-space: 36px;
