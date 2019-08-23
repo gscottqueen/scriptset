@@ -14,6 +14,6 @@ body {
   font-size: 12pt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--night);
-  color: var(--glow);
+  background-color: var(--glow);
+  color: var(--black);
 }
