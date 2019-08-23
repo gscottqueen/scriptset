@@ -33,13 +33,13 @@
   -moz-box-shadow: var(--dark-shaddow);
   box-shadow: var(--dark-shaddow); */
   /* TODO: setup dark vs light theme */
-  /* -webkit-box-shadow: var(--light-shaddow);
+  -webkit-box-shadow: var(--light-shaddow);
   -moz-box-shadow: var(--light-shaddow);
-  box-shadow: var(--light-shaddow); */
+  box-shadow: var(--light-shaddow);
   /* TODO: setup nightlight theme */
-  -webkit-box-shadow: var(--glow-shaddow);
+  /* -webkit-box-shadow: var(--glow-shaddow);
   -moz-box-shadow: var(--glow-shaddow);
-  box-shadow: var(--glow-shaddow);
+  box-shadow: var(--glow-shaddow); */
   padding: var(--standard-margins);
   /* TODO: set up large margins selector */
   /* padding: var(--large-margins); */
@@ -79,13 +79,13 @@
   -moz-box-shadow: var(--dark-shaddow);
   box-shadow: var(--dark-shaddow); */
   /* TODO: setup dark vs light theme */
-  /* -webkit-box-shadow: var(--light-shaddow);
+  -webkit-box-shadow: var(--light-shaddow);
   -moz-box-shadow: var(--light-shaddow);
-  box-shadow: var(--light-shaddow); */
+  box-shadow: var(--light-shaddow);
   /* TODO: setup nightlight theme */
-  -webkit-box-shadow: var(--glow-shaddow);
+  /* -webkit-box-shadow: var(--glow-shaddow);
   -moz-box-shadow: var(--glow-shaddow);
-  box-shadow: var(--glow-shaddow);
+  box-shadow: var(--glow-shaddow); */
   padding: var(--standard-margins);
   /* TODO: set up large margins */
   /* padding: var(--large-margins; */  
