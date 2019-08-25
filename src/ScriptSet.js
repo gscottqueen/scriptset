@@ -26,7 +26,6 @@ class ScriptSet extends Component {
     console.log(this.state.script)
     console.log(this.state.scriptScenes)
 
-
     return (
       <div className="App">
         <div id="script" className="script">

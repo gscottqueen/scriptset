@@ -73,7 +73,6 @@
 /* .script-dialog */
 
 .script-dialog--title {
-  /* border: 1px solid lightseagreen; */
   text-decoration: underline;
   margin-top: 84px;
   margin-bottom: var(--single-space);
