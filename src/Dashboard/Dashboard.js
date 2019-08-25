@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ScriptSet from '../ScriptSet.js';
 
-class Home extends Component {
+class Dashboard extends Component {
   login() {
     this.props.auth.login();
   }
@@ -39,4 +39,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Dashboard;

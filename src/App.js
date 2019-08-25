@@ -35,14 +35,14 @@ class App extends Component {
           <Navbar.Header>
             <Navbar.Brand>
               <Button 
-              onClick={this.goTo.bind(this, 'home')}>Auth0 - React</Button>
+              onClick={this.goTo.bind(this, 'dashboard')}>Auth0 - React</Button>
             </Navbar.Brand>
             <Button
               bsStyle="primary"
               className="btn-margin"
-              onClick={this.goTo.bind(this, 'home')}
+              onClick={this.goTo.bind(this, 'dashboard')}
             >
-              Home
+              Dashboard
             </Button>
             {
               !isAuthenticated() && (
