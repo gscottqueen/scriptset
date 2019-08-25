@@ -86,7 +86,6 @@ export default class Auth {
 
     this.auth0.logout({
       returnTo: window.location.origin
-      // returnTo: process.env.REACT_APP_LOGOUT_URL
     });
 
     // navigate to the home route
