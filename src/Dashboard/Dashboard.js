@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ScriptSet from '../ScriptSet.js';
+import Scripts from '../Scripts.js'
 
 class Dashboard extends Component {
   login() {
@@ -15,7 +15,7 @@ class Dashboard extends Component {
               <h4>
                 You are logged in!
               </h4>
-              <ScriptSet/>
+              <Scripts/>
             </div>
             )
         }
