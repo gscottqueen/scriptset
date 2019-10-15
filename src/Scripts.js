@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ScriptListCard from './ScriptListCard';
 // Bring in our scripts
 const importAll = (r) => r.keys().map(r);
 const scriptArray = importAll(require.context('./Data/Scripts', true, /\.json$/)); // TODO: update this as an API call
@@ -21,7 +21,7 @@ class Scripts extends Component {
         <ul className="scripts-list">
           {this.state.scripts.map((script, index) =>
             <li key={index}>
-              <button>{script.title}</button>
+              <ScriptListCard title={script.title} />
             </li>
           )}
         </ul>
