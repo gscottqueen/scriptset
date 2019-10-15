@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import DATA from './farmland.json'
+import DATA from './Data/Scripts/farmland.json'
 
 class ScriptSet extends Component {
 
