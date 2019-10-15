@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // Bring in our scripts
 const importAll = (r) => r.keys().map(r);
-const scriptArray = importAll(require.context('./Data/Scripts', true, /\.json$/));
+const scriptArray = importAll(require.context('./Data/Scripts', true, /\.json$/)); // TODO: update this as an API call
 
 class Scripts extends Component {
 
