@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 
 // Bring in our scripts
-// const scriptsContext = require.context('./Data/Scripts', true, /\.json$/);
-// const scriptArray = scriptsContext.keys().map((scripts) => scriptsContext(scripts));
 const importAll = (r) => r.keys().map(r);
 const scriptArray = importAll(require.context('./Data/Scripts', true, /\.json$/));
 
 class Scripts extends Component {
 
-  state = {
-    scripts: scriptArray,
+  constructor(props) {
+    super(props)
+    this.state = { 
+      scripts: scriptArray,
+    }
   }
 
   render() {
@@ -19,7 +20,7 @@ class Scripts extends Component {
       <div>
         <ul className="scripts-list">
           {this.state.scripts.map((script, index) =>
-            <li index={index}>
+            <li key={index}>
               <button>{script.title}</button>
             </li>
           )}
