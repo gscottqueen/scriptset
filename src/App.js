@@ -25,9 +25,9 @@ class App extends Component {
 
   render() {
     const { isAuthenticated } = this.props.auth;
-    console.log(process.env.REACT_APP_DOMAIN);
-    console.log(process.env.REACT_APP_CLIENT_ID);
-    console.log(process.env.REACT_APP_CALLBACK_URL);
+    // console.log(process.env.REACT_APP_DOMAIN);
+    // console.log(process.env.REACT_APP_CLIENT_ID);
+    // console.log(process.env.REACT_APP_CALLBACK_URL);
 
     return (
       <div>
