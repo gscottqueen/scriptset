@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Navbar, Button } from 'react-bootstrap';
 import './App.css';
 
 class App extends Component {
@@ -31,45 +30,30 @@ class App extends Component {
 
     return (
       <div>
-        <Navbar fluid>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <Button 
-              onClick={this.goTo.bind(this, 'dashboard')}>Auth0 - React</Button>
-            </Navbar.Brand>
-            <Button
-              bsStyle="primary"
-              className="btn-margin"
-              onClick={this.goTo.bind(this, 'dashboard')}
-            >
-              Dashboard
-            </Button>
-            {
-              !isAuthenticated() && (
-                  <Button
-                    id="qsLoginBtn"
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.login.bind(this)}
-                  >
-                    Log In
-                  </Button>
+        <button 
+          onClick={this.goTo.bind(this, 'dashboard')}>Auth0 - React</button>
+        <button
+          bsStyle="primary"
+          className="btn-margin"
+          onClick={this.goTo.bind(this, 'dashboard')}>Dashboard</button>
+          {
+            !isAuthenticated() && (
+              <button
+                id="qsLoginBtn"
+                bsStyle="primary"
+                className="btn-margin"
+                onClick={this.login.bind(this)}>Log In</button>
                 )
-            }
-            {
-              isAuthenticated() && (
-                  <Button
-                    id="qsLogoutBtn"
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.logout.bind(this)}
-                  >
-                    Log Out
-                  </Button>
+          }
+          {
+            isAuthenticated() && (
+              <button
+                id="qsLogoutBtn"
+                bsStyle="primary"
+                className="btn-margin"
+                onClick={this.logout.bind(this)}>Log Out</button>
                 )
-            }
-          </Navbar.Header>
-        </Navbar>
+          }
       </div>
     );
   }
