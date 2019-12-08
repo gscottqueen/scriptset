@@ -18,16 +18,16 @@ class App extends Component {
   componentDidMount() {
     const { renewSession } = this.props.auth;
 
-    if (localStorage.getItem('isLoggedIn') === 'true') {
+    if (localStorage.getItem('isLoggedIn') === 'false') {
       renewSession();
     }
   }
 
   render() {
     const { isAuthenticated } = this.props.auth;
-    console.log(process.env.REACT_APP_DOMAIN);
-    console.log(process.env.REACT_APP_CLIENT_ID);
-    console.log(process.env.REACT_APP_CALLBACK_URL);
+    // console.log(process.env.REACT_APP_DOMAIN);
+    // console.log(process.env.REACT_APP_CLIENT_ID);
+    // console.log(process.env.REACT_APP_CALLBACK_URL);
 
     return (
       <div>

@@ -62,9 +62,6 @@
   text-align: center;
   max-width: 816px;
   width: 100%;
-  -webkit-box-shadow: var(--light-shaddow);
-  -moz-box-shadow: var(--light-shaddow);
-  box-shadow: var(--light-shaddow);
   padding: var(--standard-margins);
   margin-bottom: 36px;
   overflow: none;
