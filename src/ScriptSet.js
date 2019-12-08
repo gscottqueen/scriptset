@@ -29,12 +29,6 @@ class ScriptSet extends Component {
     return (
       <div className="App">
         <div id="script" className="script">
-          {/* <div  id="script-cover" className="script-cover script-cover">
-            <div className="script-cover--title">"{this.state.scriptCover.title}"</div>
-            <div className="script-cover--additional">{this.state.scriptCover.additional ? this.state.scriptCover.additional : null}</div>
-            <div className="script-cover--byline">written by</div>
-            <div className="script-cover--author">{this.state.scriptCover.author ? this.state.scriptCover.author : 'unknown'}</div>
-          </div> */}
           <div id="script-page" className="script-dialog script-page">
           <div className="script-dialog--title">{this.state.scriptCover.title}</div>
             {this.state.scriptScenes.map(function(scene, key) {
