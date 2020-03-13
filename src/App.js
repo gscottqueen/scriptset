@@ -30,17 +30,17 @@ class App extends Component {
 
     return (
       <div>
-        <button 
+        <button
           onClick={this.goTo.bind(this, 'dashboard')}>Auth0 - React</button>
         <button
-          bsStyle="primary"
+          bsstyle="primary"
           className="btn-margin"
           onClick={this.goTo.bind(this, 'dashboard')}>Dashboard</button>
           {
             !isAuthenticated() && (
               <button
                 id="qsLoginBtn"
-                bsStyle="primary"
+                bsstyle="primary"
                 className="btn-margin"
                 onClick={this.login.bind(this)}>Log In</button>
                 )
@@ -49,7 +49,7 @@ class App extends Component {
             isAuthenticated() && (
               <button
                 id="qsLogoutBtn"
-                bsStyle="primary"
+                bsstyle="primary"
                 className="btn-margin"
                 onClick={this.logout.bind(this)}>Log Out</button>
                 )
